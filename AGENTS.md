@@ -52,6 +52,9 @@ The VoIP platform is Asterisk. The media transport decision is still open: the p
 - Avoid blocking the event loop in audio paths.
 - Use structured logging for call/session events, stream transitions, and provider latency.
 - Keep secrets and provider credentials in environment configuration, never hard-coded.
+- Always wrap control-flow bodies in braces, including single-statement `if`, `else`, `for`, `while`, and `do` blocks. Put the opening brace on the control-flow line and the body and closing brace on separate lines; do not use single-line control-flow statements.
+- Use blank lines to separate guards, state updates, resource setup, callbacks, and other logical phases inside methods. Avoid packing unrelated statements together.
+- Prefer `async`/`await` with standard `try`/`catch` blocks over `.then()` and `.catch()` promise chains when it keeps the asynchronous flow clear.
 
 ## Testing Guidelines
 
